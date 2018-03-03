@@ -1,0 +1,35 @@
+<div class="panel panel-default bg-success">
+    <div class="panel-heading">
+        <h3  class="panel-title p-3 mb-2 bg-warning text-dark">{{ convertToDate({ dt: weatherData.dt }) | date: dateFormat }}</h3>
+    </div>
+	
+    <div class="panel-body p-3 mb-2 bg-success text-white">
+		<div>
+			<p  class="text-warning">
+				Condition: {{ weatherData.weather[0].main }}
+			</p>
+			<p  class="text-warning">
+				Description: {{ weatherData.weather[0].description }}
+			</p>
+		</div>
+		<div>
+			<p> 
+				Maximum Temperature: {{ convertToTempFunc({ daytimeTemp: weatherData.main.temp_max }) }} ºC
+			</p>
+			<p>
+				Minimum Temperature: {{ convertToTempFunc({ daytimeTemp: weatherData.main.temp_min }) }} ºC
+			<p>
+			<p>
+				Humidity : {{ weatherData.main.humidity }} %
+			</p>
+		</div>
+		<div>
+			<p  class="text-info">
+				Pressure: {{ weatherData.main.pressure }} Psi
+			</p>
+			<p  class="text-info">
+				Description: {{ weatherData.wind.speed }}
+			</p>
+		</div>
+    </div>
+</div>

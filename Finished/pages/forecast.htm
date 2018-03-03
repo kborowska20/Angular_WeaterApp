@@ -1,0 +1,21 @@
+<!--WELCOME INDEX PAGE !-->
+<!-- CHOOSEING A CITY (TYPE A NAME EX. KRAKOW AND YOU GWT A WEATHER !-->
+<!-- INVOKE A FUNC FROM DIRECITIVES.JS !-->
+
+<p>
+    <a href="#/">Back to Search</a>
+</p>
+
+Forecast for {{ city }}
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <weather-report weather-data="weatherResult" 
+							convert-to-temp-func="convertToCelcius(weatherResult.main.temp)"
+							convert-to-date="convertToDate(weatherResult.dt)" 
+							date-format="MMMM d, y">
+			</weather-report>
+        </div>
+    </div>
+</div>
